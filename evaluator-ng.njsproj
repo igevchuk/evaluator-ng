@@ -48,6 +48,8 @@
     <Folder Include="src\app\entry\ngrx\model\" />
     <Folder Include="src\app\modules\" />
     <Folder Include="src\app\bridge\" />
+    <Folder Include="src\app\modules\blueprint\" />
+    <Folder Include="src\app\modules\dashboard\" />
     <Folder Include="src\assets\" />
     <Folder Include="src\environments\" />
   </ItemGroup>
@@ -57,6 +59,7 @@
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\entry\components\dashboardFirst.guard.ts" />
     <TypeScriptCompile Include="src\app\entry\components\entry.component.ts" />
     <TypeScriptCompile Include="src\app\entry\components\notFound.component.ts" />
     <TypeScriptCompile Include="src\app\entry\entry.module.ts" />
@@ -80,6 +83,10 @@
     <TypeScriptCompile Include="src\app\entry\ngrx\reducer.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\service.ts" />
     <TypeScriptCompile Include="src\app\bridge\sharedState.model.ts" />
+    <TypeScriptCompile Include="src\app\modules\blueprint\blueprint.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\blueprint\blueprint.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\dashboard\dashboard.module.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />
@@ -100,6 +107,8 @@
     <Content Include="src\app\entry\footer\entry-footer.component.html" />
     <Content Include="src\app\entry\header\entry-header.component.css" />
     <Content Include="src\app\entry\header\entry-header.component.html" />
+    <Content Include="src\app\modules\blueprint\blueprint.component.html" />
+    <Content Include="src\app\modules\dashboard\dashboard.component.html" />
     <Content Include="src\assets\.gitkeep" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
