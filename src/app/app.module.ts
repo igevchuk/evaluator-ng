@@ -3,13 +3,16 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-
-import { SharedState, SHARED_STATE } from './sharedState.model';
 import { Subject } from 'rxjs/Subject';
+
+import { SharedState, SHARED_STATE } from './bridge/sharedState.model';
 
 import { AppComponent } from './app.component';
 import { environment } from './../environments/environment';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
+
+import { EntryModule } from "./entry/entry.module";
+
 
 @NgModule({
   declarations: [
@@ -18,6 +21,7 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
   ],
   imports: [
     BrowserModule,
+    EntryModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule
@@ -26,4 +30,3 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

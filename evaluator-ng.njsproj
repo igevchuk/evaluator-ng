@@ -35,18 +35,53 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="api\json\" />
     <Folder Include="e2e\" />
+    <Folder Include="api\" />
     <Folder Include="src\" />
     <Folder Include="src\app\" />
+    <Folder Include="src\app\app-navbar\" />
+    <Folder Include="src\app\entry\" />
+    <Folder Include="src\app\entry\components\" />
+    <Folder Include="src\app\entry\footer\" />
+    <Folder Include="src\app\entry\header\" />
+    <Folder Include="src\app\entry\ngrx\" />
+    <Folder Include="src\app\entry\ngrx\model\" />
+    <Folder Include="src\app\modules\" />
+    <Folder Include="src\app\bridge\" />
     <Folder Include="src\assets\" />
     <Folder Include="src\environments\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
     <TypeScriptCompile Include="e2e\app.po.ts" />
+    <TypeScriptCompile Include="src\app\app-navbar\app-navbar.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app-navbar\app-navbar.component.ts" />
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\entry\components\entry.component.ts" />
+    <TypeScriptCompile Include="src\app\entry\components\notFound.component.ts" />
+    <TypeScriptCompile Include="src\app\entry\entry.module.ts" />
+    <TypeScriptCompile Include="src\app\entry\entry.reducer.ts" />
+    <TypeScriptCompile Include="src\app\entry\entry.routing.ts" />
+    <TypeScriptCompile Include="src\app\entry\footer\footer.component.ts" />
+    <TypeScriptCompile Include="src\app\entry\header\header.component.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\actions.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\effects.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\model\app-model.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\model\blueprint-model.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\model\cost-model.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\model\dashboard-model.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\model\depreciation-model.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\model\funds-model.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\model\index.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\model\invest-model.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\model\liquidity-model.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\model\revenue-model.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\reducer.ts" />
+    <TypeScriptCompile Include="src\app\entry\ngrx\service.ts" />
+    <TypeScriptCompile Include="src\app\sharedState.model.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />
@@ -61,8 +96,13 @@
     <Content Include="e2e\tsconfig.e2e.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="src\app\app-navbar\app-navbar.component.css" />
+    <Content Include="src\app\app-navbar\app-navbar.component.html" />
     <Content Include="src\app\app.component.css" />
     <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\entry\components\entry.component.html" />
+    <Content Include="src\app\entry\footer\footer.component.html" />
+    <Content Include="src\app\entry\header\header.component.html" />
     <Content Include="src\assets\.gitkeep" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
@@ -73,6 +113,16 @@
     <Content Include="tslint.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="api\json\application.js" />
+    <Compile Include="api\json\blueprint.js" />
+    <Compile Include="api\json\cost.js" />
+    <Compile Include="api\json\dashboard.js" />
+    <Compile Include="api\json\depreciation.js" />
+    <Compile Include="api\json\funds.js" />
+    <Compile Include="api\json\index.js" />
+    <Compile Include="api\json\invest.js" />
+    <Compile Include="api\json\liquidity.js" />
+    <Compile Include="api\json\revenue.js" />
     <Compile Include="karma.conf.js" />
     <Compile Include="protractor.conf.js" />
   </ItemGroup>

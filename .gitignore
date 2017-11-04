@@ -17,6 +17,7 @@
 .settings/
 *.sublime-workspace
 *.njsproj.user
+evaluator-ng.njsproj
 
 # IDE - VSCode
 .vscode/*
