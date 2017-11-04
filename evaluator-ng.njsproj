@@ -40,7 +40,6 @@
     <Folder Include="api\" />
     <Folder Include="src\" />
     <Folder Include="src\app\" />
-    <Folder Include="src\app\app-navbar\" />
     <Folder Include="src\app\entry\" />
     <Folder Include="src\app\entry\components\" />
     <Folder Include="src\app\entry\footer\" />
@@ -55,8 +54,6 @@
   <ItemGroup>
     <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
     <TypeScriptCompile Include="e2e\app.po.ts" />
-    <TypeScriptCompile Include="src\app\app-navbar\app-navbar.component.spec.ts" />
-    <TypeScriptCompile Include="src\app\app-navbar\app-navbar.component.ts" />
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
@@ -65,8 +62,9 @@
     <TypeScriptCompile Include="src\app\entry\entry.module.ts" />
     <TypeScriptCompile Include="src\app\entry\entry.reducer.ts" />
     <TypeScriptCompile Include="src\app\entry\entry.routing.ts" />
-    <TypeScriptCompile Include="src\app\entry\footer\footer.component.ts" />
-    <TypeScriptCompile Include="src\app\entry\header\header.component.ts" />
+    <TypeScriptCompile Include="src\app\entry\footer\entry-footer.component.ts" />
+    <TypeScriptCompile Include="src\app\entry\header\entry-header.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\entry\header\entry-header.component.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\actions.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\effects.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\model\app-model.ts" />
@@ -81,7 +79,7 @@
     <TypeScriptCompile Include="src\app\entry\ngrx\model\revenue-model.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\reducer.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\service.ts" />
-    <TypeScriptCompile Include="src\app\sharedState.model.ts" />
+    <TypeScriptCompile Include="src\app\bridge\sharedState.model.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />
@@ -96,13 +94,12 @@
     <Content Include="e2e\tsconfig.e2e.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="src\app\app-navbar\app-navbar.component.css" />
-    <Content Include="src\app\app-navbar\app-navbar.component.html" />
-    <Content Include="src\app\app.component.css" />
-    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\bridge\app.component.css" />
+    <Content Include="src\app\bridge\app.component.html" />
     <Content Include="src\app\entry\components\entry.component.html" />
-    <Content Include="src\app\entry\footer\footer.component.html" />
-    <Content Include="src\app\entry\header\header.component.html" />
+    <Content Include="src\app\entry\footer\entry-footer.component.html" />
+    <Content Include="src\app\entry\header\entry-header.component.css" />
+    <Content Include="src\app\entry\header\entry-header.component.html" />
     <Content Include="src\assets\.gitkeep" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
