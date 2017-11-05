@@ -13,7 +13,11 @@ import { NotFoundComponent } from './components/not-found.component';
 import { Routing } from './entry.routing';
 import { RepositoryModule } from '../repository/repository.module';
 
-// import { reducer } from './entry.reducer';
+import { StoreModule } from '@ngrx/store';
+//import { reducer } from './ngrx/reducer';
+import { reducers } from './entry.reducer';
+
+
 import { DashboardModule } from '../modules/dashboard/dashboard.module';
 import { BlueprintModule } from '../modules/blueprint/blueprint.module';
 
@@ -28,7 +32,11 @@ export const IMPORTS_MODULES = [
   DashboardModule,
   BlueprintModule,
   RepositoryModule,
-  Routing
+  Routing,
+  //StoreModule.forFeature('users', reducer)
+  StoreModule.forRoot(reducers, {
+    initialState: {}
+  })
 ];
 
 @NgModule({
