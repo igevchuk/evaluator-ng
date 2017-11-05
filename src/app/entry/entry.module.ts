@@ -8,17 +8,16 @@ import { Subject } from 'rxjs/Subject';
 import { EntryComponent } from './components/entry.component';
 import { EntryHeaderComponent } from './header/entry-header.component';
 import { EntryFooterComponent } from './footer/entry-footer.component';
-
-import { Routing } from './entry.routing';
-import { DashboardModule } from '../modules/dashboard/dashboard.module';
-import { BlueprintModule } from '../modules/blueprint/blueprint.module';
 import { NotFoundComponent } from './components/not-found.component';
 
-import { SharedState, SHARED_STATE } from '../services/sharedState.model';
+import { Routing } from './entry.routing';
+import { ServiceModule } from '../service/service.module';
+
+// import { reducer } from './entry.reducer';
+import { DashboardModule } from '../modules/dashboard/dashboard.module';
+import { BlueprintModule } from '../modules/blueprint/blueprint.module';
 
 // import { ApplicationService } from './ngrx/service';
-// import { Routing } from './entry.routing';
-// import { reducer } from './entry.reducer';
 
 export const IMPORTS_MODULES = [
   BrowserModule,
@@ -28,6 +27,7 @@ export const IMPORTS_MODULES = [
   HttpModule,
   DashboardModule,
   BlueprintModule,
+  ServiceModule,
   Routing
 ];
 
@@ -35,6 +35,6 @@ export const IMPORTS_MODULES = [
   imports: [...IMPORTS_MODULES],
   declarations: [EntryComponent, EntryHeaderComponent, EntryFooterComponent, NotFoundComponent],
   exports: [EntryComponent],
-  providers: [{ provide: SHARED_STATE, useValue: new Subject<SharedState>() }]
+  providers: []
 })
 export class EntryModule { }

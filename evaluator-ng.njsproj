@@ -47,9 +47,11 @@
     <Folder Include="src\app\entry\ngrx\" />
     <Folder Include="src\app\entry\ngrx\model\" />
     <Folder Include="src\app\modules\" />
-    <Folder Include="src\app\services\" />
+    <Folder Include="src\app\service\" />
     <Folder Include="src\app\modules\blueprint\" />
     <Folder Include="src\app\modules\dashboard\" />
+    <Folder Include="src\app\service\model\" />
+    <Folder Include="src\app\service\repository\" />
     <Folder Include="src\assets\" />
     <Folder Include="src\environments\" />
   </ItemGroup>
@@ -69,6 +71,7 @@
     <TypeScriptCompile Include="src\app\entry\header\entry-header.component.spec.ts" />
     <TypeScriptCompile Include="src\app\entry\header\entry-header.component.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\actions.ts" />
+    <TypeScriptCompile Include="src\app\service\repository\datasource.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\effects.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\model\app-model.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\model\blueprint-model.ts" />
@@ -82,7 +85,20 @@
     <TypeScriptCompile Include="src\app\entry\ngrx\model\revenue-model.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\reducer.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\service.ts" />
-    <TypeScriptCompile Include="src\app\services\sharedState.model.ts" />
+    <TypeScriptCompile Include="src\app\service\model\app-model.ts" />
+    <TypeScriptCompile Include="src\app\service\model\blueprint-model.ts" />
+    <TypeScriptCompile Include="src\app\service\model\cost-model.ts" />
+    <TypeScriptCompile Include="src\app\service\model\dashboard-model.ts" />
+    <TypeScriptCompile Include="src\app\service\model\depreciation-model.ts" />
+    <TypeScriptCompile Include="src\app\service\model\funds-model.ts" />
+    <TypeScriptCompile Include="src\app\service\model\index.ts" />
+    <TypeScriptCompile Include="src\app\service\model\invest-model.ts" />
+    <TypeScriptCompile Include="src\app\service\model\liquidity-model.ts" />
+    <TypeScriptCompile Include="src\app\service\model\revenue-model.ts" />
+    <TypeScriptCompile Include="src\app\service\repository\localStorage.ts" />
+    <TypeScriptCompile Include="src\app\service\service.module.ts" />
+    <TypeScriptCompile Include="src\app\service\repository\repository.ts" />
+    <TypeScriptCompile Include="src\app\service\repository\resolver.ts" />
     <TypeScriptCompile Include="src\app\modules\blueprint\blueprint.component.ts" />
     <TypeScriptCompile Include="src\app\modules\blueprint\blueprint.module.ts" />
     <TypeScriptCompile Include="src\app\modules\dashboard\dashboard.component.ts" />
