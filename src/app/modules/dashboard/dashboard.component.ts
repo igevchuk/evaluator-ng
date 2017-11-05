@@ -5,7 +5,6 @@ import { Observable } from 'rxjs/Observable';
 import { State, Store } from '@ngrx/store';
 
 @Component({
-  selector: 'app-dashboard',
   templateUrl: 'dashboard.component.html'
 })
 export class DashboardComponent {

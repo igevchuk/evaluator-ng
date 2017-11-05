@@ -3,20 +3,12 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { Subject } from 'rxjs/Subject';
 
-import { SharedState, SHARED_STATE } from './bridge/sharedState.model';
-
+import { EntryModule } from './entry/entry.module';
 import { AppComponent } from './app.component';
 import { environment } from './../environments/environment';
 
-import { EntryModule } from './entry/entry.module';
-
-
-@NgModule({
-  declarations: [
-    AppComponent,
-  ],
+@NgModule({  
   imports: [
     BrowserModule,
     EntryModule,
@@ -24,7 +16,7 @@ import { EntryModule } from './entry/entry.module';
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [{ provide: SHARED_STATE, useValue: new Subject<SharedState>() }],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

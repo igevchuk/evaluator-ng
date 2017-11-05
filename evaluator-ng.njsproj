@@ -47,7 +47,7 @@
     <Folder Include="src\app\entry\ngrx\" />
     <Folder Include="src\app\entry\ngrx\model\" />
     <Folder Include="src\app\modules\" />
-    <Folder Include="src\app\bridge\" />
+    <Folder Include="src\app\services\" />
     <Folder Include="src\app\modules\blueprint\" />
     <Folder Include="src\app\modules\dashboard\" />
     <Folder Include="src\assets\" />
@@ -82,7 +82,7 @@
     <TypeScriptCompile Include="src\app\entry\ngrx\model\revenue-model.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\reducer.ts" />
     <TypeScriptCompile Include="src\app\entry\ngrx\service.ts" />
-    <TypeScriptCompile Include="src\app\bridge\sharedState.model.ts" />
+    <TypeScriptCompile Include="src\app\services\sharedState.model.ts" />
     <TypeScriptCompile Include="src\app\modules\blueprint\blueprint.component.ts" />
     <TypeScriptCompile Include="src\app\modules\blueprint\blueprint.module.ts" />
     <TypeScriptCompile Include="src\app\modules\dashboard\dashboard.component.ts" />
@@ -101,8 +101,6 @@
     <Content Include="e2e\tsconfig.e2e.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="src\app\bridge\app.component.css" />
-    <Content Include="src\app\bridge\app.component.html" />
     <Content Include="src\app\entry\components\entry.component.html" />
     <Content Include="src\app\entry\footer\entry-footer.component.html" />
     <Content Include="src\app\entry\header\entry-header.component.css" />
