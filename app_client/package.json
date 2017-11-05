@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "concurrently \"ng serve\" \"npm run json\" ",
     "build": "ng build",
-    "json": "json-server --watch --p 3500 ./api/json/index.js",
+    "json": "json-server --watch --p 3500 ./../app_server/json/index.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -8,10 +8,10 @@ import * as fromRoot from '../entry.reducer';
   templateUrl: 'entry.component.html'
 })
 export class EntryComponent {
-  public appState$: Observable<fromRoot.State>;
+  public appState$: Observable<any>;
 
-  constructor(private userStore: Store<fromRoot.State>) {
-    this.appState$ = this.userStore.select(fromRoot.appState);
+  constructor(private _store: Store<fromRoot.State>) {
+    this.appState$ = this._store.select(fromRoot.appState);
     this.appState$.subscribe(appState => console.log(appState));
   }
 }

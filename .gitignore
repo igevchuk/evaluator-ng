@@ -1,14 +1,19 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
-/tmp
-/out-tsc
+/app_client/dist
+/app_client/tmp
+/app_client/out-tsc
+/app_server/dist
+/app_server/tmp
 
 # dependencies
-/node_modules
+/app_client/node_modules
+/app_server/node_modules
 
 # IDEs and editors
+/app_client/.idea
+/app_server/.idea
 /.idea
 .project
 .classpath
