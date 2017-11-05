@@ -5,9 +5,9 @@ import {
 } from '@ngrx/store';
 
 import * as fromApp from "./ngrx/reducer";
+//import * as fromDashboard from "../modules/dashboard/ngrx/reducer";
 //import * as fromBlueprint from "../modules/blueprint/ngrx/reducer";
 //import * as fromCost from "../modules/cost/ngrx/reducer";
-//import * as fromDashboard from "../modules/dashboard/ngrx/reducer";
 //import * as fromDepreciation from "../modules/depreciation/ngrx/reducer";
 //import * as fromFunds from "../modules/funds/ngrx/reducer";
 //import * as fromInvest from "../modules/invest/ngrx/reducer";
@@ -49,11 +49,22 @@ export const reducers: ActionReducerMap<State> = {
   //costState: fromCost.reducer
 };
 
-export const getLoadedState = (state: State) => state.appState.loaded;
-export const getLoadingState = (state: State) => state.appState.loading;
-export const getEntitiesState = (state: State) => state.appState.entities;
+// appState: fromApp.State
+export const getAppState = (state: State) => state.appState;
+export const appStateSelector = (state: State) => state;
+export const appState = createSelector(appStateSelector, getAppState);
 
-export const userStateSelector = (state: State) => state;
-export const loadedState = createSelector(userStateSelector, getLoadedState);
-export const loadingState = createSelector(userStateSelector, getLoadingState);
-export const userState = createSelector(userStateSelector, getEntitiesState);
+
+//export function getAppState_(state$: Observable<State>) {
+//  return state$.select(s => s.appState);
+//}
+
+
+// dashboardState: fromDashboard.State
+// blueprint: fromBlueprint.State
+// revenue: fromRevenue.State;
+// liquidityState: fromLiquidity.State
+// investState: fromInvest.State
+// fundsState: fromFunds.State
+// depreciationState: fromDepreciation.State
+// costState: fromCost.State

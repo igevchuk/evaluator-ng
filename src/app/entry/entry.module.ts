@@ -14,7 +14,6 @@ import { Routing } from './entry.routing';
 import { RepositoryModule } from '../repository/repository.module';
 
 import { StoreModule } from '@ngrx/store';
-//import { reducer } from './ngrx/reducer';
 import { reducers } from './entry.reducer';
 
 
@@ -33,7 +32,6 @@ export const IMPORTS_MODULES = [
   BlueprintModule,
   RepositoryModule,
   Routing,
-  //StoreModule.forFeature('users', reducer)
   StoreModule.forRoot(reducers, {
     initialState: {}
   })

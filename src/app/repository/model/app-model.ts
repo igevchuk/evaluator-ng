@@ -17,7 +17,7 @@ export interface IApplication {
     };
 }
 
-export class ApplicationModel implements IApplication {
+export class ApplicationModel_ implements IApplication {
     hasLoaded?: false;
     scope?: 1;
     industry?: string;
@@ -29,4 +29,10 @@ export class ApplicationModel implements IApplication {
         normalYear?: number,
         reinvest?: boolean
     };
+}
+
+export class ApplicationModel {
+  constructor(
+    public id?: number,
+    public name?: string) { }
 }

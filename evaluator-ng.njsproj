@@ -38,6 +38,8 @@
     <Folder Include="api\json\" />
     <Folder Include="e2e\" />
     <Folder Include="api\" />
+    <Folder Include="app_client\" />
+    <Folder Include="app_server\" />
     <Folder Include="src\" />
     <Folder Include="src\app\" />
     <Folder Include="src\app\entry\" />
