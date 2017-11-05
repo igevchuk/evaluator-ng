@@ -11,7 +11,7 @@ export interface State {
 };
 
 const initialState: State = {
-  appState: new ApplicationModel(1,'this is name')
+  appState: new ApplicationModel(true, 1, 'industry', 'this is name')
 };
 
 export function reducer(state = initialState, action: appAction.Actions): State {
