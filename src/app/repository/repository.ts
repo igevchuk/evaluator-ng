@@ -12,8 +12,8 @@ import {
     InvestModel,
     LiquidityModel,
     Product
-} from '../model';
-import { DataSource } from './datasource';
+} from './model';
+import { DataSource } from './repository.datasource';
 
 @Injectable()
 export class Repository {

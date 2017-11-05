@@ -19,7 +19,7 @@ import {
   FundsModel,
   InvestModel,
   LiquidityModel
-} from './../model';
+} from './model';
 
 export const REST_URL = new InjectionToken('rest_url');
 

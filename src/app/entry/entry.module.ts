@@ -11,7 +11,7 @@ import { EntryFooterComponent } from './footer/entry-footer.component';
 import { NotFoundComponent } from './components/not-found.component';
 
 import { Routing } from './entry.routing';
-import { ServiceModule } from '../service/service.module';
+import { RepositoryModule } from '../repository/repository.module';
 
 // import { reducer } from './entry.reducer';
 import { DashboardModule } from '../modules/dashboard/dashboard.module';
@@ -27,7 +27,7 @@ export const IMPORTS_MODULES = [
   HttpModule,
   DashboardModule,
   BlueprintModule,
-  ServiceModule,
+  RepositoryModule,
   Routing
 ];
 

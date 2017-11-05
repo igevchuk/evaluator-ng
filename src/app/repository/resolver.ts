@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { DataSource } from './datasource';
-import { Product } from '../model';
+import { DataSource } from './repository.datasource';
+import { Product } from './model';
 // import { MessageService } from '../modules/messages/message.service';
 // import { Message } from '../modules/messages/message.model';
 
