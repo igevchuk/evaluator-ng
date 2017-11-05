@@ -61,7 +61,7 @@
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\entry\components\dashboardFirst.guard.ts" />
     <TypeScriptCompile Include="src\app\entry\components\entry.component.ts" />
-    <TypeScriptCompile Include="src\app\entry\components\notFound.component.ts" />
+    <TypeScriptCompile Include="src\app\entry\components\not-found.component.ts" />
     <TypeScriptCompile Include="src\app\entry\entry.module.ts" />
     <TypeScriptCompile Include="src\app\entry\entry.reducer.ts" />
     <TypeScriptCompile Include="src\app\entry\entry.routing.ts" />

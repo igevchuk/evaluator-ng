@@ -1,8 +1,8 @@
-﻿import * as appModel from "./app-model";
+import * as appModel from './app-model';
 
 // Model Defination
 export class FundsModel {
-    hasLoaded?: boolean = false;
+    hasLoaded?: false;
     valueObject?: {
     };
     entity?: {

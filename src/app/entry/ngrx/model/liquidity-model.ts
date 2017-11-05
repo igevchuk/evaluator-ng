@@ -1,9 +1,9 @@
-﻿import * as appModel from "./app-model";
+import * as appModel from './app-model';
 
 // Model Defination
 export class LiquidityModel {
-    hasLoaded?: boolean = false;
-    valueObject?: {     
+    hasLoaded?: false;
+    valueObject?: {
     };
     entity?: {
         name?: string;

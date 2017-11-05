@@ -1,6 +1,6 @@
-﻿import * as appModel from "./app-model";
+import * as appModel from './app-model';
 
-// contract 
+// contract
 export interface Tax {
     id?: number;
     name?: string;
@@ -11,7 +11,7 @@ export interface Tax {
     taxList?: [{}];
 }
 
-// contract 
+// contract
 export interface ValueAddedTax {
     industry?: string;
     inputValue?: number;
@@ -33,7 +33,7 @@ export class TaxTypes {
 }
 
 // Entity
-export interface productRevenue {
+export interface ProductRevenue {
     taxId?: number;
     productId?: number;
     name?: string;
@@ -42,20 +42,20 @@ export interface productRevenue {
 }
 
 enum taxMode {
-    "Composite",
-    "Separate"
+    'Composite',
+    'Separate'
 }
 
 // Model Defination
 export class RevenueModel {
-    hasLoaded?: boolean = false;
+    hasLoaded?: false;
     valueObject?: {
         taxOption?: TaxOption;
         taxTypes?: TaxTypes;
     };
     entity?: {
         name?: string;
-        taxMode?: string; //taxMode[taxMode.Separate];   
-        projectRevenue?: productRevenue[];
+        taxMode?: string;
+        projectRevenue?: ProductRevenue[];
     };
 }

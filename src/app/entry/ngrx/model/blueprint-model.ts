@@ -1,4 +1,4 @@
-﻿import * as appModel from "./app-model";
+import * as appModel from './app-model';
 
 export interface IProduct {
     id?: number;
@@ -35,7 +35,7 @@ export class Sphere {
 }
 
 export class Duration {
-    period?: number = 20;
+    period?: 20;
     startingYear?: number;
     startupYear?: number;
     normalYear?: number;
@@ -55,10 +55,10 @@ export class Pricing { }
 export class Properties { }
 
 export class BlueprintModel {
-    public hasLoaded?: boolean = false;
-    public scope?: number = 1
-    public evaluationCriterionId?: number = 0;
-    public evaluationSystemId?: number = 0;
+    public hasLoaded?: false;
+    public scope?: 1;
+    public evaluationCriterionId?: 0;
+    public evaluationSystemId?: 0;
     public valueObject?: {
         sphere: Sphere,
         duration: Duration
@@ -103,11 +103,11 @@ export const BlueprintLables = {
 
 
 /** appEvaluator/modules/blueprint/ngrx/blueprint.model.ts **/
-//export interface CurrentSearch {
+// export interface CurrentSearch {
 //    name: string;
 //    location?: {
 //        latitude: number,
 //        longitude: number
 //    },
 //    radius: number
-//}
+// }

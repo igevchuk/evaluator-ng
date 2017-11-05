@@ -10,7 +10,7 @@ import { SharedState, SHARED_STATE } from './bridge/sharedState.model';
 import { AppComponent } from './app.component';
 import { environment } from './../environments/environment';
 
-import { EntryModule } from "./entry/entry.module";
+import { EntryModule } from './entry/entry.module';
 
 
 @NgModule({

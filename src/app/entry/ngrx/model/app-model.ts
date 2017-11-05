@@ -1,4 +1,4 @@
-﻿export interface IOption {
+export interface IOption {
     id: number;
     selected: boolean;
     description: string;
@@ -18,8 +18,8 @@ export interface IApplication {
 }
 
 export class ApplicationModel implements IApplication {
-    hasLoaded?: boolean = false;
-    scope?: number = 1;
+    hasLoaded?: false;
+    scope?: 1;
     industry?: string;
     name?: string;
     duration?: {
