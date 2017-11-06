@@ -16,11 +16,21 @@ import { RepositoryModule } from '../repository/repository.module';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './entry.reducer';
 
+import { EffectsModule } from "@ngrx/effects";
+import { AppEffects } from "./ngrx/effects";
+//import { BlueprintEffects } from "../modules/blueprint/ngrx/effects";
+//import { RevenueEffects } from "../modules/revenue/ngrx/effects";
+//import { CostEffects } from "../modules/cost/ngrx/effects";
+//import { DashboardEffects } from "../modules/dashboard/ngrx/effects";
+//import { DepreciationEffects } from "../modules/depreciation/ngrx/effects";
+//import { FundsEffects } from "../modules/funds/ngrx/effects";
+//import { InvestEffects } from "../modules/invest/ngrx/effects";
+//import { LiquidityEffects } from "../modules/liquidity/ngrx/effects";
+
 
 import { DashboardModule } from '../modules/dashboard/dashboard.module';
 import { BlueprintModule } from '../modules/blueprint/blueprint.module';
-
-// import { ApplicationService } from './ngrx/service';
+import { ApplicationService } from './ngrx/service';
 
 export const IMPORTS_MODULES = [
   BrowserModule,
@@ -34,13 +44,24 @@ export const IMPORTS_MODULES = [
   Routing,
   StoreModule.forRoot(reducers, {
     initialState: {}
-  })
+  }),
+  EffectsModule.forFeature ([
+    AppEffects,
+    //BlueprintEffects,
+    //RevenueEffects,
+    //CostEffects,
+    //DashboardEffects,
+    //DepreciationEffects,
+    //FundsEffects,
+    //InvestEffects,
+    //LiquidityEffects
+  ])
 ];
 
 @NgModule({
   imports: [...IMPORTS_MODULES],
   declarations: [EntryComponent, EntryHeaderComponent, EntryFooterComponent, NotFoundComponent],
   exports: [EntryComponent],
-  providers: []
+  providers: [ApplicationService]
 })
-export class EntryModule { }
+export class EntryModule {}

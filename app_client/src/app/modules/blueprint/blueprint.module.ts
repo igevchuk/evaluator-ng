@@ -8,15 +8,31 @@ import { Observable } from 'rxjs/Observable';
 import { Store, StoreModule } from '@ngrx/store';
 
 import { BlueprintComponent } from './blueprint.component';
+import { BlueprintService } from "./ngrx/service";
+
+import { EffectsModule } from "@ngrx/effects";
+import { BlueprintEffects } from "./ngrx/effects";
 
 const COMPONENTS = [
     BlueprintComponent,
 ];
 
+export const IMPORTS_MODULES = [
+  BrowserModule,
+  FormsModule,
+  ReactiveFormsModule,
+  RouterModule,
+  StoreModule,
+  NgbModule.forRoot(),
+  EffectsModule.forFeature([
+    BlueprintEffects
+  ])
+];
+
 @NgModule({
-    imports: [BrowserModule, FormsModule, ReactiveFormsModule, RouterModule, NgbModule.forRoot(), StoreModule],
-    declarations: [...COMPONENTS],
-    exports: [ ...COMPONENTS],
-    providers: []
+  imports: [...IMPORTS_MODULES],
+  declarations: [...COMPONENTS],
+  exports: [...COMPONENTS],
+  providers: [BlueprintService]
 })
 export class BlueprintModule { }

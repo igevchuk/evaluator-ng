@@ -9,13 +9,16 @@ import { EntryModule } from './entry/entry.module';
 import { AppComponent } from './app.component';
 import { environment } from './../environments/environment';
 
+import { EffectsModule } from "@ngrx/effects";
+
 @NgModule({
   imports: [
     BrowserModule,
     EntryModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    EffectsModule.forRoot([])
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]

@@ -39,38 +39,3 @@ export type Actions =
     LoadProductsAction |
     ChangeScopeAction |
     VerifyOptionAction
-
-
-//=========================
-
-export enum MODES {
-    CREATE, EDIT
-}
-export class SharedState {
-    constructor(public mode: MODES, public id?: number, public pid?: number) { }
-}
-
-export const SHARED_STATE = new InjectionToken("shared_state");
-
-
-@Injectable()
-export class BlueprintActions {
-    static ADD_PROJECT = 'Add Project';
-    static REMOVE_PROJECT = 'Remove Project';
-
-    //ChangeCurrency(payload: string): Action {
-    //    return {
-    //        type: BlueprintActions.ADD_PROJECT,
-    //        payload: payload
-    //    }
-    //}
-
-    //LoadCurrencyRates(payload: string): Action {
-    //    return {
-    //        type: BlueprintActions.REMOVE_PROJECT,
-    //        payload: payload
-    //    }
-    //}
-}
-
-//==============================
