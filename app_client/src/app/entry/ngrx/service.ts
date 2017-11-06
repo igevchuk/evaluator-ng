@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
-import { ApplicationModel } from '../../repository/model';
-import { Repository } from '../../repository/repository';
+import { ApplicationModel, Repository } from "./model";
 
 @Injectable()
 export class ApplicationService {
