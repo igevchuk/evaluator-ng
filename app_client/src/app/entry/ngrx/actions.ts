@@ -1,7 +1,7 @@
 import { InjectionToken, Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
 
-import { ApplicationModel } from '../../repository/model';
+import { ApplicationModel } from "./model";
 
 export const ActionTypes = {
   INITIALIZE: 'INITIALIZE',

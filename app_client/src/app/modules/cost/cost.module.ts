@@ -15,7 +15,7 @@ import { NgbModule, NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-boots
 //import { CostService } from "./ngrx/service";
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, RouterModule, NgbModule.forRoot(), ServiceModule],
+    imports: [BrowserModule, FormsModule, RouterModule, NgbModule.forRoot(), /*ServiceModule*/],
     declarations: [/*CostComponent, CostSettingsComponent, CostOperatingComponent, CostEvaluateComponent, ConnectRemoteComponent*/],
     exports: [/*CostComponent, CostSettingsComponent, CostOperatingComponent, CostEvaluateComponent, ConnectRemoteComponent*/],
     providers: [/*CostService*/]
