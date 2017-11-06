@@ -6,11 +6,25 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { DashboardComponent } from './dashboard.component';
 
+import { EffectsModule } from "@ngrx/effects";
+import { DashboardEffects } from "./ngrx/effects";
+import { DashboardService } from "./ngrx/service";
+
+
+export const IMPORTS_MODULES = [
+  BrowserModule,
+  FormsModule,
+  RouterModule,
+  NgbModule.forRoot(),
+  EffectsModule.forFeature([
+    DashboardEffects
+  ])
+];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, RouterModule, NgbModule.forRoot()],
+  imports: [...IMPORTS_MODULES],
   declarations: [DashboardComponent],
   exports: [DashboardComponent],
-  providers: []
+  providers: [DashboardService]
 })
 export class DashboardModule { }

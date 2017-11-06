@@ -53,7 +53,6 @@ export const stateSelector = (state: State) => state;
 
 // appState: fromApp.State
 export const getAppState = (state: State) => state.appState;
-//export const appStateSelector = (state: State) => state;
 export const appState = createSelector(stateSelector, getAppState);
 
 // blueprint: fromBlueprint.State

@@ -10,12 +10,24 @@ import { NgbModule, NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-boots
 //import { InvestTableComponent } from "./components/invest-table.component";
 //import { ConnectRemoteComponent } from "./components/connect-remote.component";
 
-//import { InvestService } from "./ngrx/service";
+import { EffectsModule } from "@ngrx/effects";
+import { InvestEffects } from "./ngrx/effects";
+import { InvestService } from "./ngrx/service";
+
+export const IMPORTS_MODULES = [
+  BrowserModule,
+  FormsModule,
+  RouterModule,
+  NgbModule.forRoot(),
+  EffectsModule.forFeature([
+    InvestEffects
+  ])
+];
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, RouterModule, NgbModule.forRoot()],
+  imports: [...IMPORTS_MODULES],
     declarations: [/*InvestComponent, InvestSettingsComponent, InvestInvestmentComponent, InvestTableComponent, ConnectRemoteComponent*/],
     exports: [/*InvestComponent, InvestSettingsComponent, InvestInvestmentComponent, InvestTableComponent, ConnectRemoteComponent*/],
-    providers: [/*InvestService*/]
+    providers: [InvestService]
 })
 export class InvestModule { }

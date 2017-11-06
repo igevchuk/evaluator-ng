@@ -11,6 +11,4 @@ export class DashboardService {
     get Dashboard(): Observable<DashboardModel> {
         return this.repo.Dashboard;
     }
-
-
 }

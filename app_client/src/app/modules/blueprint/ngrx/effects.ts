@@ -14,26 +14,26 @@ import { Effect, Actions } from '@ngrx/effects';
 import { Observable } from 'rxjs/Observable';
 
 import { BlueprintService } from "./service";
-import * as actions from './actions';
+import * as blueprintActions from './actions';
 
 @Injectable()
 export class BlueprintEffects {
 
   @Effect() loadBlueprint$ = this.actions$
-    .ofType(actions.ActionTypes.INITIALIZE)
+    .ofType(blueprintActions.ActionTypes.INITIALIZE)
     .switchMap(() =>
       this.service.Blueprint
         .map(blueprint => ({
-          type: actions.ActionTypes.LOAD_PRODUCTS,
+          type: blueprintActions.ActionTypes.LOAD_PRODUCTS,
           payload: blueprint[0]
         }))
-        .catch(() => Observable.of({ type: actions.ActionTypes.INITIALIZE }))
-    );
+        .catch(() => Observable.of({ type: blueprintActions.ActionTypes.INITIALIZE }))
+  );
 
   constructor(
     private actions$: Actions,
     private service: BlueprintService,
-  ) {}
+  ) { }
 }
 
 

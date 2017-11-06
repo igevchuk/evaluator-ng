@@ -4,7 +4,9 @@ import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { NgbModule, NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
-//import { ServiceModule } from "../../repo/repo.module";
+import { EffectsModule } from "@ngrx/effects";
+import { CostEffects } from "./ngrx/effects";
+import { CostService } from "./ngrx/service";
 
 //import { CostComponent } from "./cost.component";
 //import { CostSettingsComponent } from "./components/cost-settings.component";
@@ -12,12 +14,20 @@ import { NgbModule, NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-boots
 //import { CostEvaluateComponent } from "./components/cost-evaluate.component";
 //import { ConnectRemoteComponent } from "./components/connect-remote.component";
 
-//import { CostService } from "./ngrx/service";
+export const IMPORTS_MODULES = [
+  BrowserModule,
+  FormsModule,
+  RouterModule,
+  NgbModule.forRoot(),
+  EffectsModule.forFeature([
+    CostEffects
+  ])
+];
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, RouterModule, NgbModule.forRoot(), /*ServiceModule*/],
-    declarations: [/*CostComponent, CostSettingsComponent, CostOperatingComponent, CostEvaluateComponent, ConnectRemoteComponent*/],
-    exports: [/*CostComponent, CostSettingsComponent, CostOperatingComponent, CostEvaluateComponent, ConnectRemoteComponent*/],
-    providers: [/*CostService*/]
+  imports: [...IMPORTS_MODULES],
+  declarations: [/*CostComponent, CostSettingsComponent, CostOperatingComponent, CostEvaluateComponent, ConnectRemoteComponent*/],
+  exports: [/*CostComponent, CostSettingsComponent, CostOperatingComponent, CostEvaluateComponent, ConnectRemoteComponent*/],
+  providers: [CostService]
 })
 export class CostModule { }

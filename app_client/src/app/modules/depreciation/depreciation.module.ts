@@ -8,13 +8,24 @@ import { RouterModule } from "@angular/router";
 //import { DepreciationEntryComponent } from "./components/depreciation-entry.component";
 
 
-//import { DepreciationService } from "./ngrx/service";
+import { EffectsModule } from "@ngrx/effects";
+import { DepreciationEffects } from "./ngrx/effects";
+import { DepreciationService } from "./ngrx/service";
+
+export const IMPORTS_MODULES = [
+  BrowserModule,
+  FormsModule,
+  RouterModule,
+  EffectsModule.forFeature([
+    DepreciationEffects
+  ])
+];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, RouterModule],
+  imports: [...IMPORTS_MODULES],
   declarations: [/*DepreciationComponent, DepreciationTableComponent, DepreciationEntryComponent, ConnectRemoteComponent*/],
   exports: [/*DepreciationComponent, DepreciationTableComponent, DepreciationEntryComponent, ConnectRemoteComponent*/],
-  providers: [/*DepreciationService*/]
+  providers: [DepreciationService]
 })
 export class DepreciationModule { }
 

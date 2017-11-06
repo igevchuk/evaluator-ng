@@ -9,13 +9,25 @@ import { NgbModule }      from '@ng-bootstrap/ng-bootstrap';
 //import { LiquidityEvaluateComponent } from "./components/liquidity-evaluate.component";
 //import { LiquiditySettingsDefaultComponent } from "./components/liquidity-settings-default.component";
 
-//import { LiquidityService }           from "./ngrx/service";
+import { EffectsModule } from "@ngrx/effects";
+import { LiquidityEffects } from "./ngrx/effects";
+import { LiquidityService } from "./ngrx/service";
+
+export const IMPORTS_MODULES = [
+  BrowserModule,
+  FormsModule,
+  RouterModule,
+  NgbModule.forRoot(),
+  EffectsModule.forFeature([
+    LiquidityEffects
+  ])
+];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, RouterModule, NgbModule.forRoot()],
+  imports: [IMPORTS_MODULES],
   declarations: [/*LiquidityComponent, LiquiditySettingsComponent, LiquidityEvaluateComponent, LiquiditySettingsDefaultComponent*/],
   exports: [/*LiquidityComponent, LiquiditySettingsComponent, LiquidityEvaluateComponent, LiquiditySettingsDefaultComponent*/],
-  providers: [/*LiquidityService*/]
+  providers: [LiquidityService]
 
 })
 export class LiquidityModule { }

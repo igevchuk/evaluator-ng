@@ -18,10 +18,9 @@ export interface IApplication {
 }
 
 export class ApplicationModel implements IApplication {
-    //hasLoaded?: false;
-    //scope?: 1;
-    //industry?: string;
-    //name?: string;
+    scope?: 1;
+    industry?: string;
+    name?: string;
     duration?: {
         period?: number,
         startingYear?: number,
@@ -29,9 +28,5 @@ export class ApplicationModel implements IApplication {
         normalYear?: number,
         reinvest?: boolean
     };
-    constructor(
-      public hasLoaded?: boolean,
-      public scope?: number,
-      public industry?: string,
-      public name?: string) { }
+    constructor(public hasLoaded?: boolean) {}
 }

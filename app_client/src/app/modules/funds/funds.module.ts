@@ -8,12 +8,23 @@ import { FundsComponent } from "./funds.component";
 //import { FundsTableComponent } from "./components/funds-table.component";
 //import { ConnectRemoteComponent } from "./components/connect-remote.component";
 
-//import { FundsService } from "./ngrx/service";
+import { EffectsModule } from "@ngrx/effects";
+import { FundsEffects } from "./ngrx/effects";
+import { FundsService } from "./ngrx/service";
+
+export const IMPORTS_MODULES = [
+  BrowserModule,
+  FormsModule,
+  RouterModule,
+  EffectsModule.forFeature([
+    FundsEffects
+  ])
+];
 
 @NgModule({
     imports: [BrowserModule, FormsModule, RouterModule],
     declarations: [/*FundsComponent, FundsSettingsComponent, FundsLoanComponent, FundsTableComponent, ConnectRemoteComponent*/],
-    providers: [/*FundsService*/],
+    providers: [FundsService],
     exports: [/*FundsComponent, FundsSettingsComponent, FundsLoanComponent, FundsTableComponent, ConnectRemoteComponent*/]
 })
 export class FundsModule { }

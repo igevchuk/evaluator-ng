@@ -23,11 +23,24 @@ const COMPONENTS = [
     //RevenueSettingsTaxsComponent,
 ];
 
+import { EffectsModule } from "@ngrx/effects";
+import { RevenueEffects } from "./ngrx/effects";
+import { RevenueService } from "./ngrx/service";
+
+export const IMPORTS_MODULES = [
+  BrowserModule,
+  FormsModule,
+  RouterModule,
+  NgbModule.forRoot(),
+  EffectsModule.forFeature([
+    RevenueEffects
+  ])
+];
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, ReactiveFormsModule, RouterModule, NgbModule.forRoot(), /*ServiceModule*/],
+  imports: [IMPORTS_MODULES],
     declarations: [...COMPONENTS],
     exports: [...COMPONENTS],
-    providers: [/*RevenueService*/]
+    providers: [RevenueService]
 })
 export class RevenueModule { }

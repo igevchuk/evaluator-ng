@@ -15,6 +15,7 @@ import { RepositoryModule } from '../repository/repository.module';
 
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './entry.reducer';
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
 import { EffectsModule } from "@ngrx/effects";
 import { AppEffects } from "./ngrx/effects";
@@ -26,7 +27,6 @@ import { AppEffects } from "./ngrx/effects";
 //import { FundsEffects } from "../modules/funds/ngrx/effects";
 //import { InvestEffects } from "../modules/invest/ngrx/effects";
 //import { LiquidityEffects } from "../modules/liquidity/ngrx/effects";
-
 
 import { DashboardModule } from '../modules/dashboard/dashboard.module';
 import { BlueprintModule } from '../modules/blueprint/blueprint.module';
@@ -55,7 +55,11 @@ export const IMPORTS_MODULES = [
     //FundsEffects,
     //InvestEffects,
     //LiquidityEffects
-  ])
+  ]),
+  // Note that you must instrument after importing StoreModule
+  StoreDevtoolsModule.instrument({
+    maxAge: 5
+  })
 ];
 
 @NgModule({

@@ -15,21 +15,23 @@ import { Observable } from 'rxjs/Observable';
 
 import * as appActions from './actions';
 import { ApplicationService } from './service';
-import { ApplicationModel } from './model';
 
 @Injectable()
 export class AppEffects {
-
-  constructor(
-    private actions$: Actions,
-    private service: ApplicationService,
-  ) { }
 
   @Effect() initialApp$ = this.actions$
     .ofType(appActions.ActionTypes.INITIALIZE)
     .switchMap(() =>
       this.service.Application
-        .map(app => ({ type: appActions.ActionTypes.LOAD_APPMODEL, payload: app }))
+        .map(app => ({
+          type: appActions.ActionTypes.LOAD_APPMODEL,
+          payload: app
+        }))
         .catch(() => Observable.of({ type: appActions.ActionTypes.INITIALIZE }))
-    );
+  );
+
+  constructor(
+    private actions$: Actions,
+    private service: ApplicationService,
+  ) {}
 }
