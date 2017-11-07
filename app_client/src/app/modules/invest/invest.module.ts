@@ -4,7 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { NgbModule, NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
-//import { InvestComponent } from "./invest.component";
+import { InvestComponent } from "./invest.component";
 //import { InvestSettingsComponent } from "./components/invest-settings.component";
 //import { InvestInvestmentComponent } from "./components/invest-investment.component";
 //import { InvestTableComponent } from "./components/invest-table.component";
@@ -26,8 +26,8 @@ export const IMPORTS_MODULES = [
 
 @NgModule({
   imports: [...IMPORTS_MODULES],
-    declarations: [/*InvestComponent, InvestSettingsComponent, InvestInvestmentComponent, InvestTableComponent, ConnectRemoteComponent*/],
-    exports: [/*InvestComponent, InvestSettingsComponent, InvestInvestmentComponent, InvestTableComponent, ConnectRemoteComponent*/],
+  declarations: [InvestComponent, /*InvestSettingsComponent, InvestInvestmentComponent, InvestTableComponent, ConnectRemoteComponent*/],
+  exports: [InvestComponent, /*InvestSettingsComponent, InvestInvestmentComponent, InvestTableComponent, ConnectRemoteComponent*/],
     providers: [InvestService]
 })
 export class InvestModule { }

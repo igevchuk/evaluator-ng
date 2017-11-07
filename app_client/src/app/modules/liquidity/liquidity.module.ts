@@ -4,7 +4,7 @@ import { FormsModule }    from "@angular/forms";
 import { RouterModule }   from "@angular/router";
 import { NgbModule }      from '@ng-bootstrap/ng-bootstrap';
 
-//import { LiquidityComponent }         from "./liquidity.component";
+import { LiquidityComponent }         from "./liquidity.component";
 //import { LiquiditySettingsComponent } from "./components/liquidity-settings.component";
 //import { LiquidityEvaluateComponent } from "./components/liquidity-evaluate.component";
 //import { LiquiditySettingsDefaultComponent } from "./components/liquidity-settings-default.component";
@@ -25,8 +25,8 @@ export const IMPORTS_MODULES = [
 
 @NgModule({
   imports: [IMPORTS_MODULES],
-  declarations: [/*LiquidityComponent, LiquiditySettingsComponent, LiquidityEvaluateComponent, LiquiditySettingsDefaultComponent*/],
-  exports: [/*LiquidityComponent, LiquiditySettingsComponent, LiquidityEvaluateComponent, LiquiditySettingsDefaultComponent*/],
+  declarations: [LiquidityComponent, /*LiquiditySettingsComponent, LiquidityEvaluateComponent, LiquiditySettingsDefaultComponent*/],
+  exports: [LiquidityComponent, /*LiquiditySettingsComponent, LiquidityEvaluateComponent, LiquiditySettingsDefaultComponent*/],
   providers: [LiquidityService]
 
 })

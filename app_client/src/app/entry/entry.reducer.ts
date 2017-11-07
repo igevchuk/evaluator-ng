@@ -62,6 +62,10 @@ export const blueprintState = createSelector(stateSelector, getBlueprintState);
 // dashboardState: fromDashboard.State
 export const getDashboardState = (state: State) => state.dashboardState;
 export const dashboardState = createSelector(stateSelector, getDashboardState);
+export const getDashboardEntityState = (state: State) => state.dashboardState;
+export const dashboardEntityState = createSelector(stateSelector, getDashboardState);
+export const getDashboardValueObjectState = (state: State) => state.dashboardState;
+export const dashboardValueObjectState = createSelector(stateSelector, getDashboardState);
 
 // costState: fromCost.State
 export const getCostState = (state: State) => state.costState;
@@ -70,6 +74,10 @@ export const costState = createSelector(stateSelector, getCostState);
 // depreciationState: fromDepreciation.State
 export const getDepreciationState = (state: State) => state.depreciationState;
 export const depreciationState = createSelector(stateSelector, getDepreciationState);
+export const getDepreciationEntityState = (state: State) => state.depreciationState;
+export const depreciationEntityState = createSelector(stateSelector, getDepreciationEntityState);
+export const getDepreciationValueObjectState = (state: State) => state.depreciationState;
+export const depreciationValueObjectState = createSelector(stateSelector, getDepreciationValueObjectState);
 
 // fundsState: fromFunds.State
 export const getFundsState = (state: State) => state.fundsState;

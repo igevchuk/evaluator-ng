@@ -2,45 +2,45 @@ import { Component, Inject } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
 import { Observable } from "rxjs/Observable";
-//import { State, Store } from "@ngrx/store";
-//import * as actions from "./ngrx/actions"
-//import { InvestModel} from "./ngrx/model";
-//import * as fromRoot from '../../entry/entry.reducer';
+import { State, Store } from "@ngrx/store";
+import * as fromRoot from '../../entry/entry.reducer';
+import * as actions from "./ngrx/actions"
+import { InvestModel} from "./ngrx/model";
 
 @Component({
   selector: "invest",
   templateUrl: "invest.component.html"
 })
 export class InvestComponent {
-    //public investState: Observable<InvestModel>;
+    investState: Observable<any>;
 
-    //task: string = "settings";
-    //private tasks: string[];
+    task: string = "settings";
+    private tasks: string[];
 
-    //constructor(private _store: Store<fromRoot.State>) {
-    //    this.investState = this._store.let(fromRoot.investState);
+    constructor(private store$: Store<fromRoot.State>) {
+      this.investState = this.store$.select(fromRoot.investState);
 
-    //    this.tasks = new Array<string>(
-    //        "Settings",
-    //        "Investment"
-    //    );
-    //}
+        this.tasks = new Array<string>(
+            "Settings",
+            "Investment"
+        );
+    }
 
-    //ngOnInit() {
-    //    this.investState.subscribe(state => {
-    //        if (state.hasLoaded == false) {
-    //            this._store.dispatch(new actions.InitializeAction({}));
-    //        }
-    //    });
-    //}
+    ngOnInit() {
+        this.investState.subscribe(state => {
+            if (state.hasLoaded == false) {
+              //this.store$.dispatch(new actions.InitializeAction({}));
+            }
+        });
+    }
 
 
-    //getTask(): string[] {
-    //    return this.tasks;
-    //}
+    getTask(): string[] {
+        return this.tasks;
+    }
 
-    //onChange(e) {
-    //    this.task = e.target.name;
-    //}
+    onChange(e) {
+        this.task = e.target.name;
+    }
    
 }

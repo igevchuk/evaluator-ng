@@ -17,8 +17,7 @@ export class EntryHeaderComponent implements OnInit {
     { key: '/liquidity', value: 'Liquidity' },
     { key: '/invest', value: 'Invest' },
     { key: '/funds', value: 'Funds' },
-    { key: '/depreciation', value: 'Depreciation' },
-    { key: '/ngxredux', value: 'Ngx Redux' }
+    { key: '/depreciation', value: 'Depreciation' }
   ];
 
   constructor() { }

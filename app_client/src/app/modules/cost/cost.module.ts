@@ -8,7 +8,7 @@ import { EffectsModule } from "@ngrx/effects";
 import { CostEffects } from "./ngrx/effects";
 import { CostService } from "./ngrx/service";
 
-//import { CostComponent } from "./cost.component";
+import { CostComponent } from "./cost.component";
 //import { CostSettingsComponent } from "./components/cost-settings.component";
 //import { CostOperatingComponent } from "./components/cost-operating.component";
 //import { CostEvaluateComponent } from "./components/cost-evaluate.component";
@@ -24,10 +24,14 @@ export const IMPORTS_MODULES = [
   ])
 ];
 
+const COMPONENTS = [
+  CostComponent
+];
+
 @NgModule({
   imports: [...IMPORTS_MODULES],
-  declarations: [/*CostComponent, CostSettingsComponent, CostOperatingComponent, CostEvaluateComponent, ConnectRemoteComponent*/],
-  exports: [/*CostComponent, CostSettingsComponent, CostOperatingComponent, CostEvaluateComponent, ConnectRemoteComponent*/],
+  declarations: [...COMPONENTS],
+  exports: [...COMPONENTS],
   providers: [CostService]
 })
 export class CostModule { }

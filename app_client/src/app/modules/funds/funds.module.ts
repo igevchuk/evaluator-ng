@@ -25,9 +25,9 @@ NgbModule,
 
 @NgModule({
     imports: [BrowserModule, FormsModule, RouterModule],
-    declarations: [/*FundsComponent, FundsSettingsComponent, FundsLoanComponent, FundsTableComponent, ConnectRemoteComponent*/],
-    providers: [FundsService],
-    exports: [/*FundsComponent, FundsSettingsComponent, FundsLoanComponent, FundsTableComponent, ConnectRemoteComponent*/]
+    declarations: [FundsComponent, /*FundsSettingsComponent, FundsLoanComponent, FundsTableComponent, ConnectRemoteComponent*/],
+    exports: [FundsComponent, /*FundsSettingsComponent, FundsLoanComponent, FundsTableComponent, ConnectRemoteComponent*/],
+    providers: [FundsService]
 })
 export class FundsModule { }
 

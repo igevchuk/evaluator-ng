@@ -32,8 +32,14 @@ import { AppEffects } from "./ngrx/effects";
 
 import { DashboardModule } from '../modules/dashboard/dashboard.module';
 import { BlueprintModule } from '../modules/blueprint/blueprint.module';
-import { ApplicationService } from './ngrx/service';
+import { CostModule } from "../modules/cost/cost.module";
+import { RevenueModule } from "../modules/revenue/revenue.module";
+import { LiquidityModule } from "../modules/liquidity/liquidity.module";
+import { InvestModule } from "../modules/invest/invest.module";
+import { FundsModule } from "../modules/funds/funds.module";
+import { DepreciationModule } from "../modules/depreciation/depreciation.module";
 
+import { ApplicationService } from './ngrx/service';
 import { DashboardFirstGuard } from "./components/dashboardFirst.guard"; 
 
 export const IMPORTS_MODULES = [
@@ -44,6 +50,12 @@ export const IMPORTS_MODULES = [
   HttpModule,
   DashboardModule,
   BlueprintModule,
+  CostModule,
+  RevenueModule,
+  LiquidityModule,
+  InvestModule,
+  FundsModule,
+  DepreciationModule,
   RepositoryModule,
   Routing,
   NgbModule.forRoot(),

@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { DashboardComponent } from './dashboard.component';
+import { DashboardPanelComponent } from "./components/dashboard-panel.component";
+import { ConnectRemoteComponent } from "./components/connect-remote.component";
 
 import { EffectsModule } from "@ngrx/effects";
 import { DashboardEffects } from "./ngrx/effects";
@@ -23,8 +25,8 @@ export const IMPORTS_MODULES = [
 
 @NgModule({
   imports: [...IMPORTS_MODULES],
-  declarations: [DashboardComponent],
-  exports: [DashboardComponent],
+  declarations: [DashboardComponent, DashboardPanelComponent, ConnectRemoteComponent],
+  exports: [DashboardComponent, DashboardPanelComponent, ConnectRemoteComponent],
   providers: [DashboardService]
 })
 export class DashboardModule { }
