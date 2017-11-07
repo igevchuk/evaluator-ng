@@ -60,6 +60,16 @@ export const getBlueprintState = (state: State) => state.blueprintState;
 export const blueprintState = createSelector(stateSelector, getBlueprintState);
 export const getBlueprintProductsState = (state: State) => state.blueprintState.blueprintState.entity.products;
 export const blueprintProductsState = createSelector(stateSelector, getBlueprintProductsState);
+export const getBlueprintValueObjectState = (state: State) => state.blueprintState.blueprintState.valueObject;
+export const blueprintValueObjectState = createSelector(stateSelector, getBlueprintValueObjectState);
+export const getBlueprintEvaluationSystemState = (state: State) => state.blueprintState.blueprintState.evaluationSystemId;
+export const blueprintEvaluationSystemState = createSelector(stateSelector, getBlueprintEvaluationSystemState);
+export const getBlueprintEvaluationCriterionOptionState = (state: State) => state.blueprintState.blueprintState.evaluationCriterionId;
+export const blueprintEvaluationCriterionOptionState = createSelector(stateSelector, getBlueprintEvaluationCriterionOptionState);
+export const getBlueprintEntityState = (state: State) => state.blueprintState.blueprintState.entity;
+export const blueprintEntityState = createSelector(stateSelector, getBlueprintEntityState);
+
+
 
 
 // dashboardState: fromDashboard.State

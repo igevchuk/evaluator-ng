@@ -1,1 +1,8 @@
-blueprint-settings.component
+<blueprint-settings-sphere (evaluationCriterionEvent)="evaluationCriterionHandler($event)"
+                           (evaluationSystemEvent)="evaluationSystemHandler($event)"
+                           [evaluationCriterionId]="evaluationCriterionId  | async"
+                           [evaluationSystemId]="evaluationSystemId  | async"
+                           [valueObjectState]="valueObjectState  | async">
+</blueprint-settings-sphere>
+
+<blueprint-settings-duration></blueprint-settings-duration>

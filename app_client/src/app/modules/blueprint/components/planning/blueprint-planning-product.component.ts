@@ -10,7 +10,7 @@ import 'rxjs/add/operator/debounceTime';
 
 interface IChanges { [key: string]: SimpleChange };
 
-import { Product } from "./../../ngrx/model";
+import { Product } from "./../../ngrx/index";
 
 @Component({
   selector: "blueprint-planning-product",
