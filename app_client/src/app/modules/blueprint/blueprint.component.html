@@ -3,6 +3,11 @@
     <router-outlet></router-outlet>
   </div>
   <div class="col-3">
-    blueprint.component
+    <button *ngFor="let task of getTask()" class="btn btn-secondary btn-block" (click)="onChange($event)" name={{task}}
+            [routerLink]="['/blueprint', task.toLowerCase()]" routerLinkActive="active">
+      {{task}}
+    </button>
   </div>
 </div>
+
+

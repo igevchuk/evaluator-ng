@@ -34,6 +34,8 @@ import { DashboardModule } from '../modules/dashboard/dashboard.module';
 import { BlueprintModule } from '../modules/blueprint/blueprint.module';
 import { ApplicationService } from './ngrx/service';
 
+import { DashboardFirstGuard } from "./components/dashboardFirst.guard"; 
+
 export const IMPORTS_MODULES = [
   BrowserModule,
   CommonModule,
@@ -69,6 +71,6 @@ export const IMPORTS_MODULES = [
   imports: [...IMPORTS_MODULES],
   declarations: [EntryComponent, EntryHeaderComponent, EntryFooterComponent, NotFoundComponent],
   exports: [EntryComponent],
-  providers: [ApplicationService]
+  providers: [ApplicationService, DashboardFirstGuard]
 })
 export class EntryModule {}

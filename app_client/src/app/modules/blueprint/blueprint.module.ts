@@ -16,8 +16,17 @@ import { BlueprintService } from "./ngrx/service";
 import { EffectsModule } from "@ngrx/effects";
 import { BlueprintEffects } from "./ngrx/effects";
 
+import { BlueprintSettingsComponent } from "./components/settings/blueprint-settings.component";
+import { BlueprintPlanningComponent } from "./components/planning/blueprint-planning.component";
+import { BlueprintProfileComponent } from "./components/profile/blueprint-profile.component";
+import { BlueprintPricingComponent } from "./components/pricing/blueprint-pricing.component";
+
 const COMPONENTS = [
-    BlueprintComponent,
+  BlueprintComponent,
+  BlueprintSettingsComponent,
+  BlueprintPlanningComponent,
+  BlueprintProfileComponent,
+  BlueprintPricingComponent
 ];
 
 export const IMPORTS_MODULES = [
