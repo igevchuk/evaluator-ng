@@ -11,6 +11,8 @@ import { environment } from './../environments/environment';
 
 import { EffectsModule } from "@ngrx/effects";
 
+import 'hammerjs';
+
 @NgModule({
   imports: [
     BrowserModule,
