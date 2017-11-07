@@ -2,10 +2,13 @@ import { NgModule, EventEmitter } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 import { Store, StoreModule } from '@ngrx/store';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MaterialModule } from './../../material/material.module';
+//import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 
 import { BlueprintComponent } from './blueprint.component';
 import { BlueprintService } from "./ngrx/service";
@@ -23,7 +26,10 @@ export const IMPORTS_MODULES = [
   ReactiveFormsModule,
   RouterModule,
   StoreModule,
-  NgbModule.forRoot(),
+  NgbModule,
+  MaterialModule,
+  //MatButtonModule,
+  //MatCheckboxModule,
   EffectsModule.forFeature([
     BlueprintEffects
   ])

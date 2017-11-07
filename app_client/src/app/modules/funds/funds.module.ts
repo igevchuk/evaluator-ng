@@ -7,6 +7,7 @@ import { FundsComponent } from "./funds.component";
 //import { FundsLoanComponent } from "./components/funds-loan.component";
 //import { FundsTableComponent } from "./components/funds-table.component";
 //import { ConnectRemoteComponent } from "./components/connect-remote.component";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { EffectsModule } from "@ngrx/effects";
 import { FundsEffects } from "./ngrx/effects";
@@ -16,6 +17,7 @@ export const IMPORTS_MODULES = [
   BrowserModule,
   FormsModule,
   RouterModule,
+NgbModule,
   EffectsModule.forFeature([
     FundsEffects
   ])

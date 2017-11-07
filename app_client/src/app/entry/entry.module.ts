@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Subject } from 'rxjs/Subject';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { EntryComponent } from './components/entry.component';
 import { EntryHeaderComponent } from './header/entry-header.component';
 import { EntryFooterComponent } from './footer/entry-footer.component';
@@ -42,6 +44,7 @@ export const IMPORTS_MODULES = [
   BlueprintModule,
   RepositoryModule,
   Routing,
+  NgbModule.forRoot(),
   StoreModule.forRoot(reducers, {
     initialState: {}
   }),

@@ -18,7 +18,7 @@ export const IMPORTS_MODULES = [
   BrowserModule,
   FormsModule,
   RouterModule,
-  NgbModule.forRoot(),
+  NgbModule,
   EffectsModule.forFeature([
     CostEffects
   ])

@@ -7,6 +7,7 @@ import { RouterModule } from "@angular/router";
 //import { ConnectRemoteComponent } from "./components/connect-remote.component";
 //import { DepreciationEntryComponent } from "./components/depreciation-entry.component";
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { EffectsModule } from "@ngrx/effects";
 import { DepreciationEffects } from "./ngrx/effects";
@@ -16,6 +17,7 @@ export const IMPORTS_MODULES = [
   BrowserModule,
   FormsModule,
   RouterModule,
+NgbModule,
   EffectsModule.forFeature([
     DepreciationEffects
   ])
