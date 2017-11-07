@@ -58,14 +58,17 @@ export const appState = createSelector(stateSelector, getAppState);
 // blueprint: fromBlueprint.State
 export const getBlueprintState = (state: State) => state.blueprintState;
 export const blueprintState = createSelector(stateSelector, getBlueprintState);
+export const getBlueprintProductsState = (state: State) => state.blueprintState.blueprintState.entity.products;
+export const blueprintProductsState = createSelector(stateSelector, getBlueprintProductsState);
+
 
 // dashboardState: fromDashboard.State
 export const getDashboardState = (state: State) => state.dashboardState;
 export const dashboardState = createSelector(stateSelector, getDashboardState);
-export const getDashboardEntityState = (state: State) => state.dashboardState;
-export const dashboardEntityState = createSelector(stateSelector, getDashboardState);
-export const getDashboardValueObjectState = (state: State) => state.dashboardState;
-export const dashboardValueObjectState = createSelector(stateSelector, getDashboardState);
+export const getDashboardEntityState = (state: State) => state.dashboardState.dashboardState.entity;
+export const dashboardEntityState = createSelector(stateSelector, getDashboardEntityState);
+export const getDashboardValueObjectState = (state: State) => state.dashboardState.dashboardState.valueObject;
+export const dashboardValueObjectState = createSelector(stateSelector, getDashboardValueObjectState);
 
 // costState: fromCost.State
 export const getCostState = (state: State) => state.costState;

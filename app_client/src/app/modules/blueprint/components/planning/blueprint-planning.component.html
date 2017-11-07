@@ -1,1 +1,21 @@
-blueprint-planning.component
+<div>
+  <button (click)="addProduct($event)">
+    Load Products
+  </button>
+  <blueprint-planning-sphere
+                             [blueprint]="blueprint$ | async"
+                             [appState]="appState$ | async"
+                             (changeScopeEvent)="changeScopeHandler($event)"
+                             ></blueprint-planning-sphere>
+</div>
+<br />
+
+<ngb-tabset>
+  <ngb-tab *ngFor="let product of products$ | async ">
+    <ng-template ngbTabTitle>{{product.name}}</ng-template>
+    <ng-template ngbTabContent>
+      <blueprint-planning-product [product]="product"></blueprint-planning-product>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>
+

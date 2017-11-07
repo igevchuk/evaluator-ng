@@ -20,13 +20,18 @@ import { BlueprintSettingsComponent } from "./components/settings/blueprint-sett
 import { BlueprintPlanningComponent } from "./components/planning/blueprint-planning.component";
 import { BlueprintProfileComponent } from "./components/profile/blueprint-profile.component";
 import { BlueprintPricingComponent } from "./components/pricing/blueprint-pricing.component";
+import { BlueprintPlanningSphereComponent } from "./components/planning/blueprint-planning-sphere.component";
+import { BlueprintPlanningProductComponent } from "./components/planning/blueprint-planning-product.component";
+
 
 const COMPONENTS = [
   BlueprintComponent,
   BlueprintSettingsComponent,
   BlueprintPlanningComponent,
   BlueprintProfileComponent,
-  BlueprintPricingComponent
+  BlueprintPricingComponent,
+  BlueprintPlanningSphereComponent,
+  BlueprintPlanningProductComponent
 ];
 
 export const IMPORTS_MODULES = [

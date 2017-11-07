@@ -4,8 +4,8 @@ import { ActivatedRoute } from "@angular/router";
 import { Observable } from "rxjs/Observable";
 import { Observer } from "rxjs/Observer";
 import { State, Store } from "@ngrx/store";
-import * as fromRoot from '../../../entry/entry.reducer';
 import * as actions from "../ngrx/actions"
+import * as fromRoot from '../../../entry/entry.reducer';
 
 @Component({
     selector: "dashboard-panel",
@@ -17,7 +17,7 @@ export class DashboardPanelComponent {
     public valueObjectState: Observable<any>;
 
     constructor(private store$: Store<fromRoot.State>) {
-      //this.entityState = this.store$.select(fromRoot.dashboardEntityState);
-      //this.valueObjectState = this.store$.select(fromRoot.dashboardValueObjectState);
+      this.entityState = this.store$.select(fromRoot.dashboardEntityState);
+      this.valueObjectState = this.store$.select(fromRoot.dashboardValueObjectState);
     }
 }
