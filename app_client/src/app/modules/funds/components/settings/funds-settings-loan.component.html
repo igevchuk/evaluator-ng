@@ -1,0 +1,147 @@
+﻿<div>
+  <!--<h4 class="card-header">
+    Loan
+    <span class="pull-right tag tag-pill tag-primary">
+      {{ price | currency:"USD":true:"2.2-2" }}
+    </span>
+  </h4>-->
+  <br />
+  <div class="row">
+    <div class="col-4">
+      <!--<fieldset class="form-group">
+        <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown" >
+          <button class="btn btn-outline-primary" id="dropdownManual" ngbDropdownToggle (click)="onOpenChange($event)">Action dropdown</button>
+          <div class="dropdown-menu" aria-labelledby="dropdownManual">
+            <button class="dropdown-item">Add</button>
+            <button class="dropdown-item">Remove</button>
+            <button class="dropdown-item">Import</button>
+            <button class="dropdown-item">Export</button>
+            <button class="dropdown-item">Up</button>
+            <button class="dropdown-item">Down</button>
+          </div>
+        </div>
+      </fieldset>-->
+
+      <button>Add</button><button>Cancel</button>
+      <fieldset class="form-group">
+        <input type="text" class="form-control" id="starting_year" name="starting_year">
+      </fieldset>
+
+      <button>Add</button><button>Cancel</button>
+      <fieldset class="form-group">
+        <select class="form-control" name="staus">
+          <option [value]="1">17%</option>
+          <option [value]="0">11%</option>
+          <option [value]="0">6%</option>
+        </select>
+      </fieldset>
+
+      <funds-table></funds-table>
+    </div>
+
+    <div class="col-8">
+
+      <div class="row">
+        <div class="col-4">
+          <div class="pull-right">
+            <label for="first_name">Source</label>
+          </div>
+        </div>
+        <div class="col-8">
+          <fieldset class="form-group">
+            <input type="text" class="form-control">
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="pull-right">
+            <label for="first_name">Interest(%)</label>
+          </div>
+        </div>
+        <div class="col-8">
+          <fieldset class="form-group">
+            <input type="number" class="form-control" id="starting_year" name="starting_year">
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="pull-right">
+            <label for="first_name">Interest month</label>
+          </div>
+        </div>
+        <div class="col-8">
+          <fieldset class="form-group">
+            <input type="number" class="form-control" id="starting_year" name="starting_year">
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="pull-right">
+            <label for="first_name">Priority</label>
+          </div>
+        </div>
+        <div class="col-8">
+          <fieldset class="form-group">
+            <select class="form-control" name="staus">
+              <option [value]="1">17%</option>
+              <option [value]="0">11%</option>
+              <option [value]="0">6%</option>
+            </select>
+          </fieldset>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-4">
+          <div class="pull-right">
+            <label for="first_name">Auto-repayment  </label>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="" id="reinvest" name="reinvest">
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="pull-right">
+            <label for="first_name">Payment Period</label>
+          </div>
+        </div>
+        <div class="col-8">
+          <fieldset class="form-group">
+            <input type="number" class="form-control" id="starting_year" name="starting_year">
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="pull-right">
+            <label for="first_name">Grace period</label>
+          </div>
+        </div>
+        <div class="col-8">
+          <fieldset class="form-group">
+            <input type="number" class="form-control" id="starting_year" name="starting_year">
+          </fieldset>
+        </div>
+      </div>
+
+     
+    </div>
+
+  </div>
+</div>

@@ -3,8 +3,10 @@ import { ActivatedRoute } from "@angular/router";
 
 import { Observable } from "rxjs/Observable";
 import { State, Store } from "@ngrx/store";
-import * as fromRoot from '../../entry/entry.reducer';
-import * as actions from "./ngrx/actions"
+
+//import * as fromRoot from '../../entry/entry.reducer';
+import { AppReducer } from './app.reducer';
+import * as actions from "./ngrx/actions";
 import { LiquidityModel} from "./ngrx/model";
 
 @Component({
@@ -17,8 +19,8 @@ export class LiquidityComponent {
     task: string = "settings";
     private tasks: string[];
 
-    constructor(private store$: Store<fromRoot.State>) {
-      this.liquidityState = this.store$.select(fromRoot.liquidityState);
+    constructor(private store$: Store<AppReducer.State>) {
+      this.liquidityState = this.store$.select(AppReducer.liquidityState);
 
         this.tasks = new Array<string>(
             "Settings",

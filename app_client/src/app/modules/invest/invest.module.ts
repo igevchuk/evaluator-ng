@@ -5,10 +5,10 @@ import { RouterModule } from "@angular/router";
 import { NgbModule, NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 import { InvestComponent } from "./invest.component";
-//import { InvestSettingsComponent } from "./components/invest-settings.component";
-//import { InvestInvestmentComponent } from "./components/invest-investment.component";
-//import { InvestTableComponent } from "./components/invest-table.component";
-//import { ConnectRemoteComponent } from "./components/connect-remote.component";
+import { InvestSettingsComponent } from "./components/invest-settings.component";
+import { InvestInvestmentComponent } from "./components/invest-investment.component";
+import { InvestTableComponent } from "./components/invest-table.component";
+import { ConnectRemoteComponent } from "./components/connect-remote.component";
 
 import { EffectsModule } from "@ngrx/effects";
 import { InvestEffects } from "./ngrx/effects";
@@ -24,10 +24,18 @@ export const IMPORTS_MODULES = [
   ])
 ];
 
+const COMPONENTS = [
+  InvestComponent,
+  InvestSettingsComponent,
+  InvestInvestmentComponent,
+  InvestTableComponent,
+  ConnectRemoteComponent
+];
+
 @NgModule({
   imports: [...IMPORTS_MODULES],
-  declarations: [InvestComponent, /*InvestSettingsComponent, InvestInvestmentComponent, InvestTableComponent, ConnectRemoteComponent*/],
-  exports: [InvestComponent, /*InvestSettingsComponent, InvestInvestmentComponent, InvestTableComponent, ConnectRemoteComponent*/],
+  declarations: [...COMPONENTS],
+  exports: [...COMPONENTS],
     providers: [InvestService]
 })
 export class InvestModule { }

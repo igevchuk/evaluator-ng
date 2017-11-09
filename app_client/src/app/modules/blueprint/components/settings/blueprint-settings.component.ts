@@ -5,9 +5,9 @@ import { Observable } from "rxjs/Observable";
 import { Observer } from "rxjs/Observer";
 import { State, Store } from "@ngrx/store";
 
-import { rootReducer, actions, BlueprintModel, Settings } from "./../../ngrx/index";
-//import * as fromRoot from '../../../entry/entry.reducer';
-//import * as actions from "../ngrx/actions"
+import { AppReducer } from "./../../app.reducer";
+import { BlueprintModel, Settings } from "./../../ngrx/model";
+import * as actions from "./../../ngrx/actions"
 
 @Component({
   selector: "blueprint-settings",
@@ -23,11 +23,11 @@ export class BlueprintSettingsComponent {
   blueprintEntityState: Observable<any>;
   valueObjectState: Observable<any>;
 
-  constructor(private store$: Store<rootReducer.State>) {
-    this.evaluationCriterionId = this.store$.select(rootReducer.blueprintEvaluationCriterionOptionState);
-    this.evaluationSystemId = this.store$.select(rootReducer.blueprintEvaluationSystemState);
-    this.blueprintEntityState = this.store$.select(rootReducer.blueprintEntityState);
-    this.valueObjectState = this.store$.select(rootReducer.blueprintValueObjectState);
+  constructor(private store$: Store<AppReducer.State>) {
+    this.evaluationCriterionId = this.store$.select(AppReducer.blueprintEvaluationCriterionOptionState);
+    this.evaluationSystemId = this.store$.select(AppReducer.blueprintEvaluationSystemState);
+    this.blueprintEntityState = this.store$.select(AppReducer.blueprintEntityState);
+    this.valueObjectState = this.store$.select(AppReducer.blueprintValueObjectState);
   }
 
   ngOnInit() {

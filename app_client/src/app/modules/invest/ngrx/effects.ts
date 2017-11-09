@@ -13,9 +13,8 @@ import { Injectable } from '@angular/core';
 import { Effect, Actions } from '@ngrx/effects';
 import { Observable } from 'rxjs/Observable';
 
+//import { Product, BlueprintModel } from "./model";
 import { InvestService } from "./service";
-
-import { Product, BlueprintModel } from "./model";
 import * as investActions from './actions';
 
 @Injectable()

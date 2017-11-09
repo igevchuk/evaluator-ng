@@ -9,9 +9,9 @@ import { CostEffects } from "./ngrx/effects";
 import { CostService } from "./ngrx/service";
 
 import { CostComponent } from "./cost.component";
-//import { CostSettingsComponent } from "./components/cost-settings.component";
-//import { CostOperatingComponent } from "./components/cost-operating.component";
-//import { CostEvaluateComponent } from "./components/cost-evaluate.component";
+import { CostSettingsComponent } from "./components/settings/cost-settings.component";
+import { CostOperatingComponent } from "./components/operating/cost-operating.component";
+import { CostEvaluateComponent } from "./components/evaluate/cost-evaluate.component";
 //import { ConnectRemoteComponent } from "./components/connect-remote.component";
 
 export const IMPORTS_MODULES = [
@@ -25,7 +25,10 @@ export const IMPORTS_MODULES = [
 ];
 
 const COMPONENTS = [
-  CostComponent
+  CostComponent,
+  CostSettingsComponent,
+  CostOperatingComponent,
+  CostEvaluateComponent
 ];
 
 @NgModule({

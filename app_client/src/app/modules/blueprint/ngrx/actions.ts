@@ -1,5 +1,5 @@
 import { InjectionToken, Injectable }  from "@angular/core";
-import { Action }       from '@ngrx/store';
+import { Action } from '@ngrx/store';
 
 import { BlueprintModel } from "./model";
 

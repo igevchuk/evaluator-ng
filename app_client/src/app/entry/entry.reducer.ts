@@ -83,6 +83,10 @@ export const dashboardValueObjectState = createSelector(stateSelector, getDashbo
 // costState: fromCost.State
 export const getCostState = (state: State) => state.costState;
 export const costState = createSelector(stateSelector, getCostState);
+export const getCostEntityState = (state: State) => state.costState.costState.entity;
+export const costEntityState = createSelector(stateSelector, getCostEntityState);
+export const getCostValueObjectState = (state: State) => state.costState.costState.valueObject;
+export const costValueObjectState = createSelector(stateSelector, getCostValueObjectState);
 
 // depreciationState: fromDepreciation.State
 export const getDepreciationState = (state: State) => state.depreciationState;
@@ -95,15 +99,34 @@ export const depreciationValueObjectState = createSelector(stateSelector, getDep
 // fundsState: fromFunds.State
 export const getFundsState = (state: State) => state.fundsState;
 export const fundsState = createSelector(stateSelector, getFundsState);
+export const getFundsEntityState = (state: State) => state.fundsState.fundsState.entity;
+export const fundsEntityState = createSelector(stateSelector, getFundsEntityState);
+export const getFundsValueObjectState = (state: State) => state.fundsState.fundsState.valueObject;
+export const fundsValueObjectState = createSelector(stateSelector, getFundsValueObjectState);
 
 // investState: fromInvest.State
 export const getInvestState = (state: State) => state.investState;
 export const investState = createSelector(stateSelector, getInvestState);
+export const getInvestEntityState = (state: State) => state.investState.investState.entity;
+export const investEntityState = createSelector(stateSelector, getInvestEntityState);
+export const getInvestValueObjectState = (state: State) => state.investState.investState.valueObject;
+export const investValueObjectState = createSelector(stateSelector, getInvestValueObjectState);
 
 // liquidityState: fromLiquidity.State
 export const getLiquidityState = (state: State) => state.liquidityState;
 export const liquidityState = createSelector(stateSelector, getLiquidityState);
+export const getLliquidityEntityState = (state: State) => state.liquidityState.liquidityState.entity;
+export const liquidityEntityState = createSelector(stateSelector, getLliquidityEntityState);
+export const getLiquidityValueObjectState = (state: State) => state.liquidityState.liquidityState.valueObject;
+export const liquidityValueObjectState = createSelector(stateSelector, getLiquidityValueObjectState);
+
 
 // revenueState: fromRevenue.State;
 export const getRevenueState = (state: State) => state.revenueState;
 export const revenueState = createSelector(stateSelector, getRevenueState);
+
+export const getRevenueEntityState = (state: State) => state.revenueState.revenueState.entity;
+export const revenueEntityState = createSelector(stateSelector, getRevenueEntityState);
+
+export const getRevenueProjectRevenueState = (state: State) => state.revenueState.revenueState.entity.projectRevenue;
+export const revenueProjectRevenueState = createSelector(stateSelector, getRevenueProjectRevenueState);

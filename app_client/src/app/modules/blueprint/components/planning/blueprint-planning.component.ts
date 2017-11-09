@@ -5,22 +5,24 @@ import { Observable } from "rxjs/Observable";
 import { Observer } from "rxjs/Observer";
 import { State, Store } from "@ngrx/store";
 
-import * as appActions from "./../../../../entry/ngrx/actions"
-import { rootReducer, actions, service, BlueprintModel, Product } from "./../../ngrx/index";
+import { AppReducer } from "./../../app.reducer";
+import { BlueprintModel, Product } from "./../../ngrx/model";
+import * as actions from "./../../ngrx/actions"
+import * as service from "./../../ngrx/service"
 
 @Component({
   selector: "blueprint-planning",
   templateUrl: "blueprint-planning.component.html"
 })
 export class BlueprintPlanningComponent {
-  blueprint$: Observable<BlueprintModel>;
-  products$: Observable<Product>;
+  blueprint$: Observable<any>;
+  products$: Observable<any>;
   appState$: Observable<any>;
 
-  constructor(private store$: Store<rootReducer.State>, public repo: service.BlueprintService, ref: ApplicationRef) {
-    this.blueprint$ = this.store$.select(rootReducer.blueprintState);
-    this.products$ = this.store$.select(rootReducer.blueprintProductsState);
-    this.appState$ = this.store$.select(rootReducer.appState);
+  constructor(private store$: Store<AppReducer.State>, public repo: service.BlueprintService, ref: ApplicationRef) {
+    this.blueprint$ = this.store$.select(AppReducer.blueprintState);
+    this.products$ = this.store$.select(AppReducer.blueprintProductsState);
+    this.appState$ = this.store$.select(AppReducer.appState);
 
     //(<any>window).appRef = ref;
     //(<any>window).model = this.repo;

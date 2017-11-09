@@ -3,9 +3,10 @@ import { ActivatedRoute } from "@angular/router";
 
 import { Observable } from "rxjs/Observable";
 import { State, Store } from "@ngrx/store";
-import * as fromRoot from '../../entry/entry.reducer';
+
+//import { RevenueModel } from "./ngrx/model";
+import { AppReducer } from './app.reducer';
 import * as actions from "./ngrx/actions"
-import { RevenueModel } from "./ngrx/model";
 
 @Component({
     templateUrl: "revenue.component.html"
@@ -16,8 +17,8 @@ export class RevenueComponent {
     task: string = "settings";
     private tasks: string[];
         
-    constructor(private store$: Store<fromRoot.State>) {
-      this.revenueState = this.store$.select(fromRoot.revenueState);
+    constructor(private store$: Store<AppReducer.State>) {
+      this.revenueState = this.store$.select(AppReducer.revenueState);
 
         this.tasks = new Array<string>(
             "Settings",

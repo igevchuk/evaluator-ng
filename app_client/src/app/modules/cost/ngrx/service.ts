@@ -1,16 +1,18 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs/Observable";
 
-import { CostModel, Repository } from "./model";
+import { CostModel, Product, Repository } from "./model";
 
 @Injectable()
 export class CostService {
 
   constructor(private repo: Repository) { }
 
-    get Cost(): Observable<CostModel> {
-        return this.repo.Cost;
-    }
+  get Cost(): Observable<CostModel> {
+    return this.repo.Cost;
+  }
 
-
+  get Products(): Product[] {
+    return this.repo.getProducts();
+  }
 }

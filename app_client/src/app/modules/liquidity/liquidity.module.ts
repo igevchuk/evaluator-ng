@@ -5,9 +5,10 @@ import { RouterModule }   from "@angular/router";
 import { NgbModule }      from '@ng-bootstrap/ng-bootstrap';
 
 import { LiquidityComponent }         from "./liquidity.component";
-//import { LiquiditySettingsComponent } from "./components/liquidity-settings.component";
-//import { LiquidityEvaluateComponent } from "./components/liquidity-evaluate.component";
-//import { LiquiditySettingsDefaultComponent } from "./components/liquidity-settings-default.component";
+import { LiquiditySettingsComponent } from "./components/liquidity-settings.component";
+import { LiquidityEvaluateComponent } from "./components/liquidity-evaluate.component";
+import { LiquidityEvaluateDefaultComponent } from "./components/evaluate/liquidity-evaluate-default.component";
+import { LiquidityEvaluateFundsComponent } from "./components/evaluate/liquidity-evaluate-funds.component";
 
 import { EffectsModule } from "@ngrx/effects";
 import { LiquidityEffects } from "./ngrx/effects";
@@ -23,10 +24,18 @@ export const IMPORTS_MODULES = [
   ])
 ];
 
+const COMPONENTS = [
+  LiquidityComponent,
+  LiquiditySettingsComponent,
+  LiquidityEvaluateComponent,
+  LiquidityEvaluateDefaultComponent,
+  LiquidityEvaluateFundsComponent
+];
+
 @NgModule({
   imports: [IMPORTS_MODULES],
-  declarations: [LiquidityComponent, /*LiquiditySettingsComponent, LiquidityEvaluateComponent, LiquiditySettingsDefaultComponent*/],
-  exports: [LiquidityComponent, /*LiquiditySettingsComponent, LiquidityEvaluateComponent, LiquiditySettingsDefaultComponent*/],
+  declarations: [...COMPONENTS],
+  exports: [...COMPONENTS],
   providers: [LiquidityService]
 
 })

@@ -4,7 +4,7 @@ import { ActivatedRoute } from "@angular/router";
 import { Observable } from "rxjs/Observable";
 import { State, Store } from "@ngrx/store";
 import * as actions from "./ngrx/actions"
-import * as fromRoot from '../../entry/entry.reducer';
+import { AppReducer } from './app.reducer';
 import { CostModel } from "./ngrx/model";
 
 @Component({
@@ -17,8 +17,8 @@ export class CostComponent {
     task: string = "settings";
     private tasks: string[];
 
-    constructor(private store$: Store<fromRoot.State>) {
-      this.costState = this.store$.select(fromRoot.costState);
+    constructor(private store$: Store<AppReducer.State>) {
+      this.costState = this.store$.select(AppReducer.costState);
 
         this.tasks = new Array<string>(
             "Settings",

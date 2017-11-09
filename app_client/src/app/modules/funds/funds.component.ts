@@ -3,7 +3,7 @@ import { ActivatedRoute } from "@angular/router";
 
 import { Observable } from "rxjs/Observable";
 import { State, Store } from "@ngrx/store";
-import * as fromRoot from '../../entry/entry.reducer';
+import { AppReducer } from './app.reducer';
 import * as actions from "./ngrx/actions"
 import { FundsModel } from "./ngrx/model";
 
@@ -16,12 +16,16 @@ export class FundsComponent {
     task: string = "settings";
     private tasks: string[];
 
-    constructor(private store$: Store<fromRoot.State>) {
-      this.fundsState = this.store$.select(fromRoot.fundsState);
+    constructor(private store$: Store<AppReducer.State>) {
+      this.fundsState = this.store$.select(AppReducer.fundsState);
 
         this.tasks = new Array<string>(
-            "Settings",
-            "Loan"
+          "Settings",
+          "Loan",
+          "Features",
+          "TemplateForms",
+          "ReactiveForms",
+          "Material"
         );
     }
 

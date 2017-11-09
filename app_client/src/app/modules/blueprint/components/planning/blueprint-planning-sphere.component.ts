@@ -1,5 +1,5 @@
 import { Component, Inject, Input, Output, EventEmitter } from "@angular/core";
-import { ApplicationModel, BlueprintModel, RevenueModel } from "../../ngrx/index";
+import { ApplicationModel, BlueprintModel, RevenueModel } from "../../ngrx/model";
 
 @Component({
   selector: "blueprint-planning-sphere",

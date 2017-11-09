@@ -1,0 +1,32 @@
+﻿<liquidity-evaluate-default [entityState]="entityState | async"></liquidity-evaluate-default>
+
+<div>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input class="form-check-input" type="radio" name="revenueMode" id="mode1" [(ngModel)]="taxMode" value="composite">
+      Composite
+    </label>
+    <label class="form-check-label">
+      <input class="form-check-input" type="radio" name="revenueMode" id="mode2" [(ngModel)]="taxMode" value="separate">
+      Separate
+    </label>
+    <pre>{{taxMode}}</pre>
+  </div>
+</div>
+
+<hr />
+
+<div *ngIf="getMode() == 'composite'">
+  <liquidity-evaluate-funds></liquidity-evaluate-funds>
+</div>
+
+<div *ngIf="getMode() == 'separate'">
+  <ngb-tabset>
+    <ngb-tab *ngFor="let project of getProjects()">
+      <ng-template ngbTabTitle>{{project}}</ng-template>
+      <ng-template ngbTabContent>
+        <liquidity-evaluate-funds></liquidity-evaluate-funds>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
